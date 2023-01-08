@@ -6,6 +6,7 @@ const sendEmail = require("../utils/sendEmail.js");
 
 // register a user
 exports.registerUser = catchAsync(async (req, res, next) => {
+  console.log(req.body);
   const { name, email, password } = req.body;
   const user = await User.create({
     name,
